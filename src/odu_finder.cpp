@@ -6,9 +6,11 @@
 #include <math.h>
 #include <fstream>
 #include <time.h>
-#include "rospack/rospack.h"
+#include "rospack/rospack_backcompat.h"
+#include <common.h>
 #include "odu_finder.h"
 
+using namespace odu_finder;
 ////////////////////////////
 DocumentInfo::DocumentInfo() :
 delete_document(false) {

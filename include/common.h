@@ -44,7 +44,7 @@
 namespace odu_finder
 {
 
-double logsig(double x) 
+inline double logsig(double x) 
 {
 	return 1.0 / (1.0 + exp(-x));
 }
@@ -60,7 +60,7 @@ double logsig(double x)
  * \param A
  * \param K
  */
-int cluster_points(ANNpointArray points, int points_count,
+inline int cluster_points(ANNpointArray points, int points_count,
                    std::vector<int>& membership, float r_max =
                    600.0f, float r_min = 200.0f, float A = 800.0f, float K = 0.02f) 
 {
@@ -134,17 +134,17 @@ public:
     {}
 };
 
-bool compare_keypoint_ext(KeypointExt* k1, KeypointExt* k2) 
+inline bool compare_keypoint_ext(KeypointExt* k1, KeypointExt* k2) 
 {
 	return (k1->word < k2->word);
 }
 
-bool compare_pairs(std::pair<uint32_t, float> p1, std::pair<uint32_t, float> p2) 
+inline bool compare_pairs(std::pair<uint32_t, float> p1, std::pair<uint32_t, float> p2) 
 {
 	return (p1.second > p2.second);
 }
 
-bool compare_pairs2(std::pair<std::string, int> p1, std::pair<std::string, int> p2) 
+inline bool compare_pairs2(std::pair<std::string, int> p1, std::pair<std::string, int> p2) 
 {
 	return (p1.second > p2.second);
 }

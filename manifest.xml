@@ -13,11 +13,15 @@
   <depend package="cv_bridge"/>
   <depend package="opencv2"/>
   <depend package="vocabulary_tree"/>
-  <depend package="eigen"/>
+  <!-- <depend package="eigen"/> -->
   <depend package="image_transport"/>
   <depend package="ann2"/>
+  <!-- <depend package="rospack"/> -->
   <!--for cop answer -->
   <depend package="vision_msgs"/>
+
+  <rosdep name="eigen" />
+  <rosdep name="rospack" />
   <export>
       <cpp cflags="-I${prefix}/include/" lflags="-Wl,-rpath,${prefix}/lib
       -L${prefix}/lib

@@ -5,6 +5,7 @@
 #include <cv_bridge/CvBridge.h>
 #include <vision_msgs/cop_answer.h>
 #include "odu_finder.h"
+using namespace odu_finder;
 
 class ODUFinderNode : public ODUFinder
 {

@@ -38,6 +38,7 @@
 #include <boost/thread.hpp>
 #include <boost/filesystem/operations.hpp>
 #include <boost/filesystem/fstream.hpp>
+//#define BOOST_FILESYSTEM_VERSION 2
 #include "boost/filesystem.hpp"
 
 using namespace std;
@@ -76,10 +77,10 @@ public:
          }
          else
          {
-           int len = iter->string().length();
-           int npos =  iter->string().rfind(suffix);
+           int len = iter->path().string().length();
+           int npos =  iter->path().string().rfind(suffix);
            if((unsigned long)(len - npos) == suffix.length())
-             file_list.push_back(iter->string());
+             file_list.push_back(iter->path().string());
          }
      }
    }

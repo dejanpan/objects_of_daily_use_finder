@@ -1,3 +1,5 @@
+#ifndef ODU_FINDER_H_
+#define ODU_FINDER_H_
 #include <fstream>
 #include <iostream>
 #include <list>
@@ -12,10 +14,10 @@
 #include <vocabulary_tree/simple_kmeans.h>
 
 #include <siftfast/siftfast.h>
-
 #include <common.h>
-using namespace odu_finder;
 
+namespace odu_finder
+{
 typedef Eigen::Matrix<float, 1, 128> Feature;
 typedef std::vector<Feature, Eigen::aligned_allocator<Feature> > FeatureVector;
 
@@ -189,3 +191,5 @@ protected:
    */
 	Keypoint extract_keypoints(IplImage *image, bool frames_only = false);
 };
+}
+#endif  //#ifndef ODU_FINDER_H_
